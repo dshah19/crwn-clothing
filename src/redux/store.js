@@ -5,10 +5,10 @@ import rootReducer from "./root-reducer";
 
 const middelewares = [];
 
-if(process.env.NODE_ENV == 'development') {
+if(process.env.NODE_ENV === 'development') {
     middelewares.push(logger);
 }
 
 export const store = createStore(rootReducer, applyMiddleware(...middelewares));
 export const persistor = persistStore(store);
-export default { store, persistor };
+//export default { store, persistor };
